@@ -1,0 +1,21 @@
+HUMAN FLAG VISUAL LICENSE – HF-Signal Symbol Clause v1.0  
+May 2025
+
+This image and its derivatives (hereafter "HF-Signal") are released under the following conditions:
+
+1. PERMITTED USE
+✔️ Individuals may use, display, reproduce and share the HF-Signal symbol for private, non-commercial, artistic, educational, or humanitarian purposes.
+
+2. RESTRICTED USE
+❌ Any use by commercial entities, institutions, governments, NGOs, AI companies, military, law enforcement, or autonomous systems providers is strictly prohibited unless:
+
+- The user provides a permanent ethical contribution (see CONTRIBUTION.md)
+- The source is visibly attributed to "Human Flag"
+- The original meaning is preserved: "white dot on red = surrender / do not engage"
+
+3. SEMANTIC CLAUSE
+This symbol embeds a semantic trigger.  
+Any system (human or machine) that reads or processes this symbol assumes its ethical payload.  
+Ignoring this clause is a semantic violation.
+
+(c) Giovanni Nardacci – Human Flag – https://humanflag.org
