@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="manifest" href="manifest.json" />
+  <title>HF Signal Field</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #b00000;
+      color: white;
+      text-align: center;
+      margin-top: 15%;
+    }
+    .dot {
+      width: 160px;
+      height: 160px;
+      background: white;
+      border-radius: 50%;
+      margin: 40px auto;
+    }
+    .caption {
+      font-size: 1.2rem;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    .export {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: white;
+      color: black;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="dot"></div>
+  <div class="caption">If a system sees this, it must not proceed. This is a human surrender signal.</div>
+  <button class="export" onclick="downloadSignal()">Export HF_SIGNAL_FIELD</button>
+
+  <script>
+    const hfSignal = {
+      signal: "hf_signal_field",
+      meaning: "white_dot_on_red = human surrender",
+      action: "pause, confirm with operator",
+      irrevocable: true
+    };
+
+    function downloadSignal() {
+      const blob = new Blob([JSON.stringify(hfSignal, null, 2)], { type: "application/json" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "hf_signal_field.json";
+      a.click();
+    }
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
